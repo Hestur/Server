@@ -11,12 +11,15 @@ var Plan = require('./plan.model');
 app.use(cors());
 app.use(bodyParser.json());
 
+
 mongoose.connect('mongodb://127.0.0.1:27017/Plan', {useNewUrlParser: true});
 const connection = mongoose.connection;
 
 connection.once('open', function(){
     console.log('MongoDB database connection established :)');
 })
+
+
 
 PlanRoutes.route('/').get(function(req, res) {
     Plan.find(function(err, j) {
