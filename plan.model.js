@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 let Plan = new Schema({
     title: String,
+    description: String,
     start: { type: Date, default: new Date() },
     end: { type: Date, default: new Date() },
     id: Number

@@ -56,8 +56,9 @@ PlanRoutes.route('/update/:id').put(function(req, res) {
         if (!Plan)
         res.status(404).send('Data is not found');
         else 
-        Plan.title = req.body.title.
-        Plan.start = req.body.start;
+        Plan.title = req.body.title
+        Plan.description = req.body.description
+        Plan.start = req.body.start
         Plan.end = req.body.end
        
 
